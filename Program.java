@@ -4,6 +4,13 @@ class Vehicle {
     public int wheels;
     public String color;
 
+    public Vehicle()
+    {
+        this.speed = 0;
+        this.wheels = 0;
+        this.color = "Factory Silver";
+    }
+
     public Vehicle(int speed, int wheels, String color)
     {
         this.speed = speed;
@@ -25,6 +32,10 @@ class Vehicle {
     {
         return (String.format("Color is %s | No of wheels on vehicle: %s | Speed is %s", color, wheels, speed));
     }
+}
+
+class Motorcycle extends Vehicle{
+
 }
 
 class Program {
