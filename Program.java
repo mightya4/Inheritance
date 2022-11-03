@@ -68,10 +68,10 @@ class Motorcycle extends Vehicle{
 
     public Motorcycle(){
         this.wheels = 2;
-        this.type = type.MOTORCYCLE;
+        this.type = Type.MOTORCYCLE;
     }
     public Motorcycle(int wheels, int speed, String color, String model) {
-        this.type = type.MOTORCYCLE;
+        this.type = Type.MOTORCYCLE;
         this.wheels = wheels;
         this.speed = speed;
         this.model = model;
@@ -85,5 +85,8 @@ class Program {
         System.out.println(v1.toString());
         Motorcycle m1 = new Motorcycle();
         System.out.println(m1.toString());
+        Motorcycle m2 = new Motorcycle(2,4,"Black", "Kawasaki");
+        System.out.println(m2.toString());
+
     }
 }
