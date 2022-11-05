@@ -22,6 +22,12 @@ enum Type {
     }
 }
 
+enum Transmission {
+    UNKNOWN,
+    MANUAL,
+    AUTOMATIC,
+}
+
 class Vehicle {
 
     public int speed;
@@ -79,6 +85,22 @@ class Motorcycle extends Vehicle{
     }
 }
 
+class Car extends Vehicle{
+    Transmission transmission;
+
+    public Car() {
+        this.transmission = Transmission.UNKNOWN;
+        this.wheels = 4;
+    }
+    public Car(int wheels, int speed, String color, String model, Transmission transmission) {
+        this.wheels = wheels;
+        this.speed = speed;
+        this.model = model;
+        this.color = color;
+        this.transmission = transmission;
+    }
+}
+
 class Program {
     public static void main(String[] args) {
         Vehicle v1 = new Vehicle();
@@ -87,6 +109,8 @@ class Program {
         System.out.println(m1.toString());
         Motorcycle m2 = new Motorcycle(2,4,"Black", "Kawasaki");
         System.out.println(m2.toString());
+        Car c1 = new Car();
+        System.out.println(c1.toString());
 
     }
 }
